@@ -4,7 +4,7 @@
 
 Hermira Insights is a modern, AI-powered **Data Analytics as a Service (DaaS)** platform built with **Next.js, TypeScript, and Tailwind CSS**. It helps individuals, SMEs, and enterprises transform raw data into actionable intelligence through automation, predictive modeling, and real-time analytics dashboards.
 
-![Website Screenshot](./public/images/hero/page_shot.png)
+![Website Screenshot](public/images/hero/page_shot.png)
 
 ---
 
