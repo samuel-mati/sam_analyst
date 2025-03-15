@@ -14,37 +14,28 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  // Apply system theme
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setIsDarkMode(prefersDark);
 
     const root = window.document.documentElement;
-    if (prefersDark) {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
+    root.classList.toggle('dark', prefersDark);
 
     setMounted(true);
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      const newPrefersDark = mediaQuery.matches;
+    const handleChange = (e: MediaQueryListEvent) => {
+      const newPrefersDark = e.matches;
       setIsDarkMode(newPrefersDark);
-
-      if (newPrefersDark) {
-        root.classList.add('dark');
-      } else {
-        root.classList.remove('dark');
-      }
+      root.classList.toggle('dark', newPrefersDark);
     };
 
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  const theme: 'light' | 'dark' | 'system' = 'system'; // Assume system for now
+  // theme is set to 'system' since we're reflecting system preference only
+  const theme: 'system' = 'system';
   const resolvedTheme: 'light' | 'dark' = isDarkMode ? 'dark' : 'light';
 
   const value: ThemeContextType = {
