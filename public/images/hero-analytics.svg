@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F8FAFC"/>
+  
+  <!-- Dashboard Container -->
+  <rect x="50" y="50" width="700" height="500" rx="20" fill="white" stroke="#E2E8F0" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="70" y="70" width="660" height="60" rx="10" fill="#178582" fill-opacity="0.1"/>
+  <text x="90" y="105" font-family="Arial" font-size="24" font-weight="bold" fill="#178582">Analytics Dashboard</text>
+  
+  <!-- Stats Cards -->
+  <g transform="translate(70, 150)">
+    <!-- Card 1 -->
+    <rect width="200" height="100" rx="10" fill="#F1F5F9"/>
+    <text x="20" y="40" font-family="Arial" font-size="16" fill="#64748B">Total Users</text>
+    <text x="20" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#178582">12,345</text>
+    
+    <!-- Card 2 -->
+    <rect x="220" width="200" height="100" rx="10" fill="#F1F5F9"/>
+    <text x="240" y="40" font-family="Arial" font-size="16" fill="#64748B">Revenue</text>
+    <text x="240" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#178582">$45,678</text>
+    
+    <!-- Card 3 -->
+    <rect x="440" width="200" height="100" rx="10" fill="#F1F5F9"/>
+    <text x="460" y="40" font-family="Arial" font-size="16" fill="#64748B">Conversion Rate</text>
+    <text x="460" y="70" font-family="Arial" font-size="32" font-weight="bold" fill="#178582">3.2%</text>
+  </g>
+  
+  <!-- Chart Area -->
+  <g transform="translate(70, 270)">
+    <rect width="660" height="250" rx="10" fill="#F1F5F9"/>
+    <text x="20" y="40" font-family="Arial" font-size="18" font-weight="bold" fill="#1E293B">Performance Metrics</text>
+    
+    <!-- Chart Lines -->
+    <path d="M40 200 L760 200" stroke="#CBD5E1" stroke-width="1"/>
+    <path d="M40 150 L760 150" stroke="#CBD5E1" stroke-width="1"/>
+    <path d="M40 100 L760 100" stroke="#CBD5E1" stroke-width="1"/>
+    <path d="M40 50 L760 50" stroke="#CBD5E1" stroke-width="1"/>
+    
+    <!-- Data Points -->
+    <circle cx="100" cy="120" r="4" fill="#178582"/>
+    <circle cx="200" cy="80" r="4" fill="#178582"/>
+    <circle cx="300" cy="160" r="4" fill="#178582"/>
+    <circle cx="400" cy="100" r="4" fill="#178582"/>
+    <circle cx="500" cy="140" r="4" fill="#178582"/>
+    <circle cx="600" cy="90" r="4" fill="#178582"/>
+    
+    <!-- Connecting Lines -->
+    <path d="M100 120 L200 80 L300 160 L400 100 L500 140 L600 90" stroke="#178582" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Bottom Stats -->
+  <g transform="translate(70, 540)">
+    <rect width="320" height="40" rx="5" fill="#F1F5F9"/>
+    <text x="20" y="25" font-family="Arial" font-size="14" fill="#64748B">Last Updated: 2 minutes ago</text>
+    
+    <rect x="340" width="320" height="40" rx="5" fill="#F1F5F9"/>
+    <text x="360" y="25" font-family="Arial" font-size="14" fill="#64748B">Data Source: Real-time Analytics</text>
+  </g>
+</svg> 
