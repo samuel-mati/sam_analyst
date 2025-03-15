@@ -2,46 +2,55 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
+export type ThemeType = 'light' | 'dark' | 'system';
+
 interface ThemeContextType {
   isDarkMode: boolean;
-  theme: 'light' | 'dark' | 'system';
+  theme: ThemeType;
   resolvedTheme: 'light' | 'dark';
+  setTheme: (theme: ThemeType) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<ThemeType>('system');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
+  // Apply theme based on system or selected value
   useEffect(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setIsDarkMode(prefersDark);
+    const applyTheme = () => {
+      const root = document.documentElement;
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const useDark = theme === 'dark' || (theme === 'system' && prefersDark);
 
-    const root = window.document.documentElement;
-    root.classList.toggle('dark', prefersDark);
+      root.classList.toggle('dark', useDark);
+      setIsDarkMode(useDark);
+    };
 
-    setMounted(true);
+    applyTheme();
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = (e: MediaQueryListEvent) => {
-      const newPrefersDark = e.matches;
-      setIsDarkMode(newPrefersDark);
-      root.classList.toggle('dark', newPrefersDark);
+    const handleChange = () => {
+      if (theme === 'system') {
+        applyTheme();
+      }
     };
 
     mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
+    setMounted(true);
 
-  // theme is set to 'system' since we're reflecting system preference only
-  const theme: 'system' = 'system';
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [theme]);
+
   const resolvedTheme: 'light' | 'dark' = isDarkMode ? 'dark' : 'light';
 
   const value: ThemeContextType = {
-    isDarkMode,
     theme,
+    isDarkMode,
     resolvedTheme,
+    setTheme,
   };
 
   return (
@@ -53,8 +62,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
+  if (!context) throw new Error('useTheme must be used within a ThemeProvider');
   return context;
 }
