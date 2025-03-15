@@ -57,11 +57,6 @@ Animations with Framer Motion
 Fonts from Google Fonts
 
 
-👋 Connect with Us
-Samuel Mati
-📫 LinkedIn- [Samuel Mati](https://www.linkedin.com/in/samuel-mati/)
-🌐 GitHub – [Sam-Analyst-code](https://github.com/Sam-Analyst-code)
-
 
 ## 👋 Connect with Me
 
