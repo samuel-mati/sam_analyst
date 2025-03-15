@@ -49,15 +49,6 @@ npm install
 npm run dev
 
 
-🌐 Deployment
-Hermira Insights is optimized for serverless deployment on Vercel.
-
-➡️ Deploy Now on Vercel
-
-📄 License
-This project is intended for educational, portfolio, and professional showcase purposes.
-To use this design, codebase, or platform commercially, please contact:
-📫 samuel.mati76@gmail.com
 
 🙌 Acknowledgments
 Built with ❤️ using Next.js
@@ -66,7 +57,7 @@ Animations with Framer Motion
 Fonts from Google Fonts
 👋 Connect with Us
 Samuel Mati
-📫 samuel.mati76@gmail.com
-🌐 GitHub – Sam-Analyst-code
+📫 LinkedIn- [Samuel Mati](https://www.linkedin.com/in/samuel-mati/)
+🌐 GitHub – [Sam-Analyst-code](https://github.com/Sam-Analyst-code)
 
 “At Hermira Insights, we don’t just show you the data — we help you make sense of it.”
