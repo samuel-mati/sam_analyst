@@ -55,9 +55,8 @@ Built with ❤️ using Next.js
 Deployed via Vercel
 Animations with Framer Motion
 Fonts from Google Fonts
-
-
-
+👋 Connect with Us
+Samuel Mati
 
 ## 👋 Connect with Me
 
