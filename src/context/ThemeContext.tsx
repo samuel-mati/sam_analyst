@@ -4,6 +4,8 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface ThemeContextType {
   isDarkMode: boolean;
+  theme: 'light' | 'dark';
+  resolvedTheme: 'light' | 'dark';
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -14,42 +16,43 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   // Apply system theme
   useEffect(() => {
-    // Check system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setIsDarkMode(prefersDark);
-    
-    // Apply theme
+
     const root = window.document.documentElement;
     if (prefersDark) {
       root.classList.add('dark');
     } else {
       root.classList.remove('dark');
     }
-    
+
     setMounted(true);
-    
-    // Listen for system theme changes
+
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = () => {
       const newPrefersDark = mediaQuery.matches;
       setIsDarkMode(newPrefersDark);
-      
+
       if (newPrefersDark) {
         root.classList.add('dark');
       } else {
         root.classList.remove('dark');
       }
     };
-    
+
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  const value = {
-    isDarkMode
+  const theme: 'light' | 'dark' = isDarkMode ? 'dark' : 'light';
+  const resolvedTheme: 'light' | 'dark' = theme;
+
+  const value: ThemeContextType = {
+    isDarkMode,
+    theme,
+    resolvedTheme,
   };
 
-  // Hide content until after hydration to prevent flash
   return (
     <ThemeContext.Provider value={value}>
       <div className={mounted ? 'contents' : 'hidden'}>{children}</div>
@@ -63,4 +66,4 @@ export function useTheme() {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
-} 
+}
