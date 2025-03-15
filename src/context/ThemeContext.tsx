@@ -4,7 +4,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface ThemeContextType {
   isDarkMode: boolean;
-  theme: 'light' | 'dark';
+  theme: 'light' | 'dark' | 'system';
   resolvedTheme: 'light' | 'dark';
 }
 
@@ -44,8 +44,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  const theme: 'light' | 'dark' = isDarkMode ? 'dark' : 'light';
-  const resolvedTheme: 'light' | 'dark' = theme;
+  const theme: 'light' | 'dark' | 'system' = 'system'; // Assume system for now
+  const resolvedTheme: 'light' | 'dark' = isDarkMode ? 'dark' : 'light';
 
   const value: ThemeContextType = {
     isDarkMode,

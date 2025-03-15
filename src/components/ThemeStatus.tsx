@@ -7,20 +7,20 @@ import { useState, useEffect } from 'react';
 export default function ThemeStatus() {
   const { theme, resolvedTheme } = useTheme();
   const [showStatus, setShowStatus] = useState(false);
-  
+
   // Show the status briefly whenever theme changes
   useEffect(() => {
     setShowStatus(true);
-    
+
     const timer = setTimeout(() => {
       setShowStatus(false);
     }, 2000);
-    
+
     return () => clearTimeout(timer);
   }, [theme]);
-  
+
   const getThemeIcon = () => {
-    switch(theme) {
+    switch (theme) {
       case 'light':
         return (
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,9 +44,9 @@ export default function ThemeStatus() {
         return null;
     }
   };
-  
+
   const getThemeName = () => {
-    switch(theme) {
+    switch (theme) {
       case 'light':
         return 'Light Mode';
       case 'dark':
@@ -57,7 +57,7 @@ export default function ThemeStatus() {
         return 'Unknown';
     }
   };
-  
+
   return (
     <AnimatePresence>
       {showStatus && (
@@ -73,4 +73,4 @@ export default function ThemeStatus() {
       )}
     </AnimatePresence>
   );
-} 
+}
