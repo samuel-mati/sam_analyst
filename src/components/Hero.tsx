@@ -127,7 +127,7 @@ const Hero = () => {
           >
             <div className="relative w-full aspect-square md:aspect-[4/3] max-w-lg mx-auto">
               <Image
-                src="/images/hero/hero1.png"
+                src="/images/Hero/hero1.png"
                 alt="Data Analytics Dashboard"
                 fill
                 className="object-contain z-10 rounded-lg"
