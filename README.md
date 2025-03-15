@@ -55,8 +55,16 @@ Built with ❤️ using Next.js
 Deployed via Vercel
 Animations with Framer Motion
 Fonts from Google Fonts
+
+
 👋 Connect with Us
 Samuel Mati
+<<<<<<< HEAD
+📫 LinkedIn- [Samuel Mati](https://www.linkedin.com/in/samuel-mati/)
+🌐 GitHub – [Sam-Analyst-code](https://github.com/Sam-Analyst-code)
+
+=======
+>>>>>>> b5ca66132de0d9c571e715b5f56a9e06813d920d
 
 ## 👋 Connect with Me
 
