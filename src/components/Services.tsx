@@ -78,7 +78,8 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300 group hover:bg-cool-blue"
+              className="bg-gray-100 dark:bg-gray-800 rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300 group hover:bg-gray-200 dark:hover:bg-gray-700"
+
             >
               <div className="relative">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-3 group-hover:bg-white/90 transition-colors duration-300">

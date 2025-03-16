@@ -134,7 +134,9 @@ const Navigation = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-white hover:text-accent focus:outline-none"
+              className={`p-2 transition-colors duration-200 ${
+              isScrolled ? 'text-cool-blue' : 'text-white'
+              } hover:text-accent focus:outline-none`}
             >
               {!isMobileMenuOpen ? (
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
