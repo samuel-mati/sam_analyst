@@ -27,8 +27,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-24 sm:pt-32 pb-12 overflow-hidden">
-      {/* Gradient Background */}
+    <section className="relative min-h-screen flex items-center pt-12 sm:pt-20 pb-12 overflow-hidden">
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-teal-green to-deep-purple"
         animate={{
@@ -117,7 +116,7 @@ const Hero = () => {
 
           {/* Right Image */}
           <motion.div
-            className="w-full md:w-1/2 mt-12 md:mt-0 z-10"
+            className="hidden md:block w-full md:w-1/2 mt-12 md:mt-0 z-10"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}

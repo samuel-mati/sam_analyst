@@ -60,8 +60,8 @@ const Navigation = () => {
             </div>
           </Link>
 
-          {/* Center Nav */}
-          <div className="hidden md:flex gap-6 items-center">
+          {/* Center Nav (Desktop) */}
+          <div className="hidden lg:flex gap-6 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -78,7 +78,7 @@ const Navigation = () => {
               </Link>
             ))}
 
-            {/* Dropdown with animation and working hover */}
+            {/* Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => setIsDropdownOpen(true)}
@@ -124,18 +124,18 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <button className="px-4 py-1.5 text-sm font-medium rounded-full bg-[#068DEA] text-white hover:bg-[#056fc2] transition-colors">
               Get Started
             </button>
           </div>
 
           {/* Mobile Hamburger */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 transition-colors duration-200 ${
-              isScrolled ? 'text-cool-blue' : 'text-white'
+                isScrolled ? 'text-cool-blue' : 'text-white'
               } hover:text-accent focus:outline-none`}
             >
               {!isMobileMenuOpen ? (
@@ -153,7 +153,7 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden transition-all duration-300 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`lg:hidden transition-all duration-300 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-black">
           {navLinks.map((link) => (
             <Link
