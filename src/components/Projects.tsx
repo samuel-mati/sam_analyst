@@ -43,7 +43,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="py-12 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-12 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <motion.h2
@@ -51,7 +51,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold text-[#178582] mb-3"
+            className="text-2xl md:text-3xl font-bold text-cool-blue mb-3"
           >
             Featured Projects
           </motion.h2>
@@ -85,7 +85,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-3 left-3">
-                  <span className="px-2 py-1 bg-[#178582] text-white text-xs rounded-full">
+                  <span className="px-2 py-1 bg-cool-blue text-white text-xs rounded-full">
                     {project.category}
                   </span>
                 </div>
@@ -98,13 +98,13 @@ const Projects = () => {
                   {project.description}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-[#512393] font-medium">
+                  <span className="text-sm text-cool-blue font-medium">
                     {project.impact}
                   </span>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="text-sm text-[#178582] font-semibold hover:text-[#0a4a47] transition-colors duration-300"
+                    className="text-sm text-cool-blue font-semibold hover:text-cool-blue transition-colors duration-300"
                   >
                     Read More →
                   </motion.button>

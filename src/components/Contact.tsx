@@ -45,10 +45,10 @@ const Contact = () => {
       
       <div className="w-[75%] mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-6">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-black dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-cool-blue dark:text-white">
             Get in Touch
           </h2>
-          <p className="text-base text-black dark:text-white mb-4">
+          <p className="text-base text-gray-600 dark:text-gray-300 mb-4">
             Have questions about our services or want to discuss how we can help your business? 
             Reach out to our team.
           </p>
@@ -67,7 +67,7 @@ const Contact = () => {
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-black dark:text-white mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">
                   Your Name
                 </label>
                 <input
@@ -83,7 +83,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-black dark:text-white mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">
                   Email Address
                 </label>
                 <input
@@ -99,7 +99,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-black dark:text-white mb-1">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">
                   Your Message
                 </label>
                 <textarea
@@ -152,7 +152,7 @@ const Contact = () => {
           >
             <div>
               <h3 className="text-xl font-bold mb-3 text-black dark:text-white">Contact Information</h3>
-              <p className="text-black dark:text-white mb-4 text-sm">
+              <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
                 We're here to help with any questions or concerns. Feel free to reach out through any of these channels.
               </p>
             </div>
@@ -167,7 +167,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-base font-semibold text-black dark:text-white mb-1">Address</h4>
-                  <p className="text-black dark:text-white text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
                     1234 Innovation Drive<br />
                     Tech Center, Suite 500<br />
                     San Francisco, CA 94103
@@ -183,7 +183,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-base font-semibold text-black dark:text-white mb-1">Email</h4>
-                  <a href="mailto:info@hermirainsights.com" className="text-cool-blue hover:underline text-sm color-preserve">
+                  <a href="mailto:info@hermirainsights.com" className="text-gray-600 dark:text-gray-300 hover:underline text-sm color-preserve">
                     info@hermirainsights.com
                   </a>
                 </div>
@@ -197,7 +197,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-base font-semibold text-black dark:text-white mb-1">Phone</h4>
-                  <a href="tel:+1234567890" className="text-black dark:text-white hover:text-cool-blue text-sm">
+                  <a href="tel:+1234567890" className="text-gray-600 dark:text-gray-300 hover:text-cool-blue text-sm">
                     +1 (234) 567-890
                   </a>
                 </div>
@@ -208,17 +208,17 @@ const Contact = () => {
               <h4 className="text-lg font-semibold mb-3 text-black dark:text-white">Connect With Us</h4>
               <div className="flex space-x-3">
                 <a href="#" className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded-full transition-colors color-preserve">
-                  <svg className="w-5 h-5 text-black dark:text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-gray-600 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
                   </svg>
                 </a>
                 <a href="#" className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded-full transition-colors color-preserve">
-                  <svg className="w-5 h-5 text-black dark:text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-gray-600 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z" />
                   </svg>
                 </a>
                 <a href="#" className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded-full transition-colors color-preserve">
-                  <svg className="w-5 h-5 text-black dark:text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-5 h-5 text-gray-600 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
                   </svg>
                 </a>

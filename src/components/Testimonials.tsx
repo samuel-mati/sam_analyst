@@ -68,12 +68,12 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-10 md:py-16">
+    <section className="py-10 md:py-16" id="testimonials">
       {/* Title outside the gradient background */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="text-center">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-deep-purple mb-4"
+            className="text-3xl md:text-4xl font-bold text-cool-blue mb-4"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -82,7 +82,7 @@ const Testimonials = () => {
             What Our Clients Say
           </motion.h2>
           <motion.div 
-            className="w-24 h-1 bg-deep-purple mx-auto rounded-full"
+            className="w-24 h-1 bg-cool-blue mx-auto rounded-full"
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             viewport={{ once: true }}
@@ -94,7 +94,7 @@ const Testimonials = () => {
       {/* Testimonials section with gradient background */}
       <div className="relative overflow-hidden h-64 md:h-80">
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-purple to-teal-green opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-purple to-cool-blue opacity-90" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center">
           <div className="max-w-4xl mx-auto w-full">

@@ -61,10 +61,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-12 bg-gray-50 dark:bg-gray-900">
+    <section className="py-12 bg-gray-50 dark:bg-gray-900" id="services">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#512393] mb-3">Our Services</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-cool-blue mb-3">Our Services</h2>
           <p className="text-base text-gray-600 dark:text-gray-300">
             Comprehensive data solutions to drive your business forward
           </p>
@@ -78,11 +78,11 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300 group hover:bg-[#178582]"
+              className="bg-white dark:bg-gray-800 rounded-lg p-5 shadow-md hover:shadow-lg transition-all duration-300 group hover:bg-cool-blue"
             >
               <div className="relative">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-3 group-hover:bg-white/90 transition-colors duration-300">
-                  <div className="text-[#178582] group-hover:text-[#512393] transition-colors duration-300">
+                  <div className="text-cool-blue group-hover:text-cool-blue transition-colors duration-300">
                     {service.icon}
                   </div>
                 </div>

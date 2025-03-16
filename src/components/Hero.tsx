@@ -105,15 +105,15 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Get Started
+                Our Services
               </motion.button>
 
               <motion.button 
-                className="btn-secondary"
+                className="btn-secondary hover:bg-deep-purple hover:outline-none"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Request Demo
+                Get Started
               </motion.button>
             </motion.div>
           </motion.div>

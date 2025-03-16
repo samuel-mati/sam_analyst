@@ -39,8 +39,8 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#178582] mb-3">
+            <div id="about">
+              <h2 className="text-2xl md:text-3xl font-bold text-cool-blue mb-3">
                 About Hermira Insights
               </h2>
               <p className="text-base text-gray-600 dark:text-gray-300">
@@ -62,7 +62,7 @@ const About = () => {
                   viewport={{ once: true }}
                   className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md"
                 >
-                  <div className="text-2xl font-bold text-[#178582] mb-1">
+                  <div className="text-2xl font-bold text-cool-blue mb-1">
                     {stat.value}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">
@@ -74,13 +74,13 @@ const About = () => {
 
             {/* Values */}
             <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-[#512393]">
+              <h3 className="text-xl font-semibold text-cool-blue">
                 Our Values
               </h3>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <svg
-                    className="w-5 h-5 text-[#178582] mr-2 mt-1"
+                    className="w-5 h-5 text-cool-blue mr-2 mt-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -98,7 +98,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="w-5 h-5 text-[#178582] mr-2 mt-1"
+                    className="w-5 h-5 text-cool-blue mr-2 mt-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -116,7 +116,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="w-5 h-5 text-[#178582] mr-2 mt-1"
+                    className="w-5 h-5 text-cool-blue mr-2 mt-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

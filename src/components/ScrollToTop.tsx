@@ -34,7 +34,7 @@ const ScrollToTop = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 bg-[#178582] text-white rounded-full shadow-lg hover:bg-[#0a4a47] transition-colors duration-300"
+          className="fixed bottom-8 right-8 z-50 p-3 bg-cool-blue text-white rounded-full shadow-lg hover:bg-cool-blue transition-colors duration-300"
           aria-label="Scroll to top"
         >
           <svg
