@@ -91,7 +91,9 @@ Animations with Framer Motion
 Fonts from Google Fonts
 
 👋 Connect with Me
+
+
 Samuel Mati
-📫 LinkedIn – Samuel Mati[https://www.linkedin.com/in/samuel-mati/]
-🌐 GitHub – samuel-mati[https://github.com/samuel-mati]
+📫 LinkedIn – [Samuel Mati](https://www.linkedin.com/in/samuel-mati/)
+🌐 GitHub – [samuel-mati](https://github.com/samuel-mati)
 
