@@ -9,7 +9,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Sam_Analyst | Data Analyst & ML Engineer',
+  title: 'Sam_Analyst | Data Analyst & AI',
   description: 'Data Analyst and ML Engineer specializing in transforming raw data into actionable insights through advanced analytics, visualization, and machine learning.',
   icons: {
     icon: '/images/favicon.png',
