@@ -28,8 +28,7 @@ Welcome to my personal portfolio! I specialize in Data Analytics, Machine Learni
 - 📡 **Real-Time KPI Tracking & Alerts**  
   Track key performance indicators (KPIs) in real-time and set up automated alerts for actionable insights.
 
-- 🔐 **Secure, Scalable, and Cloud-Ready Architecture**  
-  Build secure, scalable systems with cloud-based architecture for data storage and processing.
+
 
 ---
 
