@@ -5,39 +5,44 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: 'E-commerce Analytics Dashboard',
-    description: 'Comprehensive analytics solution for a leading e-commerce platform, providing real-time insights and predictive analytics.',
+    title: 'E-commerce Sales Analysis',
+    description: 'Comprehensive analysis of e-commerce sales data using Python and SQL, identifying key trends and opportunities for revenue optimization.',
     image: '/images/projects/dashboard.jpg',
-    category: 'Business Intelligence',
-    impact: '30% increase in conversion rate',
+    category: 'Data Analysis',
+    impact: 'Identified 25% revenue growth opportunities',
+    technologies: ['Python', 'SQL', 'Pandas', 'Power BI']
   },
   {
-    title: 'Supply Chain Optimization',
-    description: 'AI-powered supply chain optimization system that reduced operational costs and improved delivery times.',
+    title: 'Customer Churn Prediction',
+    description: 'Machine learning model to predict customer churn using historical data, achieving 85% accuracy in identifying at-risk customers.',
     image: '/images/projects/supplychain1.jpg',
-    category: 'Process Automation',
-    impact: '22% reduction in operational costs',
+    category: 'Machine Learning',
+    impact: 'Reduced churn rate by 15%',
+    technologies: ['Python', 'scikit-learn', 'Pandas', 'Matplotlib']
   },
   {
-    title: 'Customer Behavior Analysis',
-    description: 'Advanced customer segmentation and behavior analysis platform for a retail chain.',
+    title: 'Digital Marketing Agency Dashboard',
+    description: 'Association rule mining to identify product relationships and optimize store layout, leading to improved cross-selling opportunities.',
     image: '/images/projects/customer.jpg',
-    category: 'Customer Insights',
-    impact: '40% improvement in customer retention',
+    category: 'Data Visualization',
+    impact: '20% increase in conversions',
+    technologies: ['Power BI', 'Excel', 'DAX', 'SQL']
   },
   {
-    title: 'Market Research Platform',
-    description: 'Automated market research and competitor analysis system using web scraping and AI.',
+    title: 'Time Series Forecasting',
+    description: 'Developed ARIMA and Prophet models to forecast sales and inventory needs, reducing stockouts by 30% and optimizing inventory levels.',
     image: '/images/projects/ml-forecast.jpg',
-    category: 'Web Scraping',
-    impact: '60% faster market research process',
+    category: 'Time Series Analysis',
+    impact: '30% reduction in stockouts',
+    technologies: ['Python', 'ARIMA', 'Prophet', 'Power BI']
   },
   {
-    title: 'Financial Forecasting',
-    description: 'Machine learning-based financial forecasting system for a financial services company.',
+    title: 'Interactive Sales Dashboard',
+    description: 'Created interactive dashboards in Power BI and Tableau for real-time sales monitoring and performance tracking across multiple regions.',
     image: '/images/projects/financial.jpg',
-    category: 'AI Analytics',
-    impact: '45% more accurate predictions',
+    category: 'Data Visualization',
+    impact: '40% faster decision-making',
+    technologies: ['Power BI', 'Tableau', 'SQL', 'DAX']
   },
 ];
 
@@ -53,7 +58,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-2xl md:text-3xl font-bold text-cool-blue mb-3"
           >
-            Featured Projects
+            Portfolio Projects
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +67,7 @@ const Projects = () => {
             viewport={{ once: true }}
             className="text-base text-gray-600 dark:text-gray-300"
           >
-            Discover how we've helped businesses transform through data-driven solutions
+            A showcase of my technical projects and expertise
           </motion.p>
         </div>
 
@@ -97,6 +102,13 @@ const Projects = () => {
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
                   {project.description}
                 </p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.technologies.map((tech, idx) => (
+                    <span key={idx} className="px-2 py-1 bg-cool-blue/10 text-cool-blue text-xs rounded-full">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-cool-blue font-medium">
                     {project.impact}
@@ -106,7 +118,7 @@ const Projects = () => {
                     whileTap={{ scale: 0.95 }}
                     className="text-sm text-cool-blue font-semibold hover:text-cool-blue transition-colors duration-300"
                   >
-                    Read More →
+                    View Project →
                   </motion.button>
                 </div>
               </div>

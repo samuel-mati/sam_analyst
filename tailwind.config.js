@@ -15,7 +15,8 @@ module.exports = {
         'teal-green': '#178582',   // Teal Green
         'deep-purple': '#512393',  // Deep Purple
         'cool-blue': '#068DEA',    // Cool Blue for main CTA
-        'accent': '#4ECDC4',       // Lighter teal accent
+        'accent': '#4ECDC4', // Lighter teal accent
+       
       }
     },
   },

@@ -4,14 +4,14 @@ import PageHeaderNew from '@/components/PageHeaderNew';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Hermira Insights',
-  description: 'Get in touch with our team for data analytics solutions, AI insights, and business intelligence services.',
+  title: 'Contact Me | Sam_Analyst',
+  description: 'Get in touch with me for data analytics solutions, AI insights, and business intelligence services.',
 };
 
 export default function ContactPage() {
   return (
     <PageLayout>
-      <PageHeaderNew title="Contact Us" />
+      <PageHeaderNew title="Contact Me" />
       <Contact />
     </PageLayout>
   );

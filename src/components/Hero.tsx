@@ -4,10 +4,25 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const titles = [
+  'Data Analyst',
+  'ML Engineer',
+  'AI Solutions Architect',
+  'Data Scientist',
+  'Business Intelligence',
+  'Web Scraper',
+  'Database Administrator',
+  'Data Visualization Expert'
+];
+
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [displayedTitle, setDisplayedTitle] = useState('');
+  const [currentCharIndex, setCurrentCharIndex] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,6 +36,35 @@ const Hero = () => {
       videoRef.current.playbackRate = 0.7;
     }
   }, [videoLoaded]);
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (isTyping) {
+      if (currentCharIndex < titles[currentTitleIndex].length) {
+        timeout = setTimeout(() => {
+          setDisplayedTitle(prev => prev + titles[currentTitleIndex][currentCharIndex]);
+          setCurrentCharIndex(prev => prev + 1);
+        }, 100);
+      } else {
+        timeout = setTimeout(() => {
+          setIsTyping(false);
+        }, 1500);
+      }
+    } else {
+      if (currentCharIndex > 0) {
+        timeout = setTimeout(() => {
+          setDisplayedTitle(prev => prev.slice(0, -1));
+          setCurrentCharIndex(prev => prev - 1);
+        }, 50);
+      } else {
+        setCurrentTitleIndex(prev => (prev + 1) % titles.length);
+        setIsTyping(true);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [currentCharIndex, currentTitleIndex, isTyping]);
 
   const handleVideoLoad = () => {
     setVideoLoaded(true);
@@ -64,78 +108,68 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
-          {/* Left Text Column */}
+        <div className="flex flex-col items-center text-center">
+          {/* Main Content */}
           <motion.div
-            className="w-full md:w-1/2 text-white z-10"
+            className="w-full max-w-3xl text-white z-10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <motion.h1
-              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 font-space-grotesk [text-shadow:_2px_2px_0_rgb(0_0_0_/_90%)]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
             >
-              Empowering Smarter Decisions with Data
+              Hi, I'm Samuel Mati
             </motion.h1>
 
+            <motion.h2
+              className="text-2xl sm:text-3xl lg:text-4xl text-cool-blue mb-6 min-h-[2.5em] font-space-grotesk [text-shadow:_2px_2px_0_rgb(0_0_0_/_90%)]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
+            >
+              <span className="inline-block">
+                {displayedTitle}
+                <span className="animate-blink">|</span>
+              </span>
+            </motion.h2>
+
             <motion.p
-              className="text-lg sm:text-xl text-white/90 mb-8 max-w-xl"
+              className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
             >
-              Our AI-powered analytics platform helps businesses transform raw data into actionable insights, enabling better strategic planning and operational excellence.
+              I transform complex data into actionable insights, build predictive models, and create interactive visualizations that drive business growth.
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.6 }}
             >
-              <motion.button
-                className="btn-primary"
+              <motion.a
+                href="/projects"
+                className="btn-primary px-8 py-3 text-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Our Services
-              </motion.button>
+                View My Work
+              </motion.a>
 
-              <motion.button
-                className="btn-secondary hover:bg-deep-purple hover:outline-none"
+              <motion.a
+                href="/contact"
+                className="btn-secondary px-8 py-3 text-lg hover:bg-white hover:text-deep-purple hover:outline-none"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Get Started
-              </motion.button>
+                Let's Connect
+              </motion.a>
             </motion.div>
-          </motion.div>
-
-          {/* Right Image */}
-          <motion.div
-            className="hidden md:block w-full md:w-1/2 mt-12 md:mt-0 z-10"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
-          >
-            <div className="relative w-full aspect-square md:aspect-[4/3] max-w-lg mx-auto">
-              <Image
-                src="/images/hero_temp/hero1.png"
-                alt="Data Analytics Dashboard"
-                fill
-                className="object-contain z-10 rounded-lg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
-              <motion.div
-                className="absolute -z-10 inset-0 bg-cool-blue/20 rounded-2xl blur-2xl"
-                animate={{ scale: [1, 1.05, 1], opacity: [0.5, 0.7, 0.5] }}
-                transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
-              />
-            </div>
           </motion.div>
         </div>
       </div>

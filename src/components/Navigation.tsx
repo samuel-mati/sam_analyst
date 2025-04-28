@@ -20,16 +20,16 @@ const Navigation = () => {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '#pricing', label: 'Pricing' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/#about', label: 'About' },
+    { href: '/#projects', label: 'Projects' },
+    { href: '/#skills', label: 'Skills' },
+    { href: '/#contact', label: 'Contact' },
   ];
 
   const pageDropdown = [
-    { href: '/projects', label: 'Projects' },
-    { href: '/team', label: 'Team' },
-    { href: '/testimonials', label: 'Testimonials' },
+    { href: '/resume', label: 'Resume' },
+    { href: '/blog', label: 'Blog' },
+   
   ];
 
   return (
@@ -49,15 +49,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <div className="relative w-32 h-8 md:w-40 md:h-10">
-              <Image
-                src="/images/logo_white_background.jpg"
-                alt="Hermira Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+            <span className={`text-xl font-bold ${
+              isScrolled ? 'text-cool-blue' : 'text-white'
+            }`}>
+              Sam_Analyst
+            </span>
           </Link>
 
           {/* Center Nav (Desktop) */}
@@ -125,9 +121,9 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <button className="px-4 py-1.5 text-sm font-medium rounded-full bg-[#068DEA] text-white hover:bg-[#056fc2] transition-colors">
-              Get Started
-            </button>
+            <Link href="/contact" className="px-4 py-1.5 text-sm font-medium rounded-full bg-[#068DEA] text-white hover:bg-[#056fc2] transition-colors">
+              Let's Connect
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -186,9 +182,12 @@ const Navigation = () => {
             </Link>
           ))}
 
-          <button className="w-full mt-4 px-4 py-2 rounded-full bg-[#068DEA] text-white hover:bg-[#056fc2] text-sm font-medium">
-            Get Started
-          </button>
+          <Link 
+            href="/contact"
+            className="w-full mt-4 px-4 py-2 rounded-full bg-[#068DEA] text-white hover:bg-[#056fc2] text-sm font-medium block text-center"
+          >
+            Let's Connect
+          </Link>
         </div>
       </div>
     </motion.nav>

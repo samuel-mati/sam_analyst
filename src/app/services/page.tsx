@@ -1,4 +1,4 @@
-import Services from '@/components/Services';
+import Services from '@/components/Skills';
 import PageLayout from '@/components/PageLayout';
 import PageHeader from '@/components/PageHeader';
 import { Metadata } from 'next';

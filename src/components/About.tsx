@@ -5,27 +5,27 @@ import Image from 'next/image';
 
 const About = () => {
   const stats = [
-    { label: 'Years Experience', value: '10+' },
-    { label: 'Projects Completed', value: '500+' },
-    { label: 'Client Satisfaction', value: '98%' },
-    { label: 'Team Members', value: '50+' },
+    { label: 'Projects Delivered', value: '50+' },
+    { label: 'Data Points Analyzed', value: '1M+' },
+    { label: 'Automated Solutions', value: '100+' },
+    { label: 'Happy Clients', value: '30+' },
   ];
 
   return (
-    <section className="py-12 bg-gray-50 dark:bg-gray-900">
+    <section className="min-h-[85vh] py-20 bg-gray-50 dark:bg-gray-900 flex items-center font-space-grotesk">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative h-[350px] rounded-xl overflow-hidden"
+            className="relative h-[300px] lg:h-[400px] rounded-xl overflow-hidden shadow-lg"
           >
             <Image
-              src="/images/about/team.jpg"
-              alt="Our Team"
+              src="/images/about/profile.png"
+              alt="Samuel Mati - Data Analyst"
               fill
               className="object-cover"
             />
@@ -37,18 +37,24 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-8"
           >
             <div id="about">
-              <h2 className="text-2xl md:text-3xl font-bold text-cool-blue mb-3">
-                About Hermira Insights
+              <h2 className="text-2xl md:text-3xl font-bold text-cool-blue mb-6">
+                About Me
               </h2>
-              <p className="text-base text-gray-600 dark:text-gray-300">
-                We are a team of data scientists, analysts, and business strategists
-                dedicated to transforming businesses through data-driven insights.
-                Our mission is to empower organizations with cutting-edge analytics
-                solutions that drive growth and innovation.
-              </p>
+              <div className="space-y-6">
+                <p className="text-lg md:text-xl font-medium text-gray-700 dark:text-gray-200">
+                  I'm Samuel Mati, a Data Analyst and Web Scraper passionate about transforming raw data into clear, actionable insights.
+                </p>
+                <p className="text-base md:text-lg text-gray-600 dark:text-gray-300">
+                  I specialize in data analysis, web scraping, and building dynamic dashboards that help businesses make smarter decisions.
+                  Constantly learning and evolving, I focus on delivering clean, efficient, and impactful solutions.
+                </p>
+                <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 italic">
+                  Outside of data, I love exploring new tech and growing through continuous learning.
+                </p>
+              </div>
             </div>
 
             {/* Stats Grid */}
@@ -72,15 +78,15 @@ const About = () => {
               ))}
             </div>
 
-            {/* Values */}
-            <div className="space-y-3">
+            {/* Core Skills */}
+            <div className="space-y-4">
               <h3 className="text-xl font-semibold text-cool-blue">
-                Our Values
+                Core Skills
               </h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="flex items-center space-x-2">
                   <svg
-                    className="w-5 h-5 text-cool-blue mr-2 mt-1"
+                    className="w-5 h-5 text-cool-blue"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -92,13 +98,13 @@ const About = () => {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">
-                    Innovation through data-driven insights
+                  <span className="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                    Data Analysis
                   </span>
-                </li>
-                <li className="flex items-start">
+                </div>
+                <div className="flex items-center space-x-2">
                   <svg
-                    className="w-5 h-5 text-cool-blue mr-2 mt-1"
+                    className="w-5 h-5 text-cool-blue"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -110,13 +116,13 @@ const About = () => {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">
-                    Client-centric approach to problem-solving
+                  <span className="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                    Web Scraping
                   </span>
-                </li>
-                <li className="flex items-start">
+                </div>
+                <div className="flex items-center space-x-2">
                   <svg
-                    className="w-5 h-5 text-cool-blue mr-2 mt-1"
+                    className="w-5 h-5 text-cool-blue"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -128,11 +134,29 @@ const About = () => {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">
-                    Commitment to excellence and continuous improvement
+                  <span className="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                    Dashboard Creation
                   </span>
-                </li>
-              </ul>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <svg
+                    className="w-5 h-5 text-cool-blue"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                    Process Automation
+                  </span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

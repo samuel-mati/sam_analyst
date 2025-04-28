@@ -45,6 +45,10 @@ export default function ThemeStatus() {
         return 'Light Mode';
       case 'dark':
         return 'Dark Mode';
+      case 'system':
+        return resolvedTheme === 'dark' ? 'System (Dark)' : 'System (Light)';
+      default:
+        return 'Unknown Mode';
     }
   };
 

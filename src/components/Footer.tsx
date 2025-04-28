@@ -7,22 +7,15 @@ const Footer = () => {
   const navigation = {
     main: [
       { name: 'Home', href: '/' },
-      { name: 'Services', href: '/services' },
-      { name: 'Projects', href: '/projects' },
       { name: 'About', href: '/about' },
+      { name: 'Skills', href: '/skills' },
+      { name: 'Projects', href: '/projects' },
       { name: 'Contact', href: '/contact' },
-    ],
-    services: [
-      { name: 'Business Intelligence', href: '/services#bi' },
-      { name: 'AI Analytics', href: '/services#ai' },
-      { name: 'Web Scraping', href: '/services#scraping' },
-      { name: 'Process Automation', href: '/services#automation' },
-      { name: 'Data Visualization', href: '/services#visualization' },
     ],
     social: [
       {
         name: 'LinkedIn',
-        href: '#',
+        href: 'https://linkedin.com/in/samuel-mati',
         icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -32,17 +25,8 @@ const Footer = () => {
         ),
       },
       {
-        name: 'Twitter',
-        href: '#',
-        icon: (props: any) => (
-          <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-          </svg>
-        ),
-      },
-      {
         name: 'GitHub',
-        href: '#',
+        href: 'https://github.com/samuel-mati',
         icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -53,54 +37,39 @@ const Footer = () => {
           </svg>
         ),
       },
+      {
+        name: 'Twitter',
+        href: 'https://twitter.com/samuel-mati',
+        icon: (props: any) => (
+          <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          </svg>
+        ),
+      },
     ],
   };
 
   return (
     <footer className="bg-gray-900">
-      <div className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {/* Company Info */}
-          <div className="space-y-3">
-            <div className="relative w-28 h-7">
-              <Image
-                src="/images/logo_white_background.jpg"
-                alt="Hermira Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <p className="text-gray-400 text-xs">
-              Transforming businesses through data-driven insights and innovative solutions.
+      <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* About */}
+          <div className="space-y-4">
+            <h3 className="text-white text-lg font-semibold">Samuel Mati</h3>
+            <p className="text-gray-400 text-sm">
+              Data Analyst & ML Engineer passionate about transforming data into actionable insights and building intelligent solutions.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white text-sm font-semibold mb-3">Quick Links</h3>
-            <ul className="space-y-1">
+            <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
               {navigation.main.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-400 text-xs hover:text-white transition-colors duration-300"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-white text-sm font-semibold mb-3">Services</h3>
-            <ul className="space-y-1">
-              {navigation.services.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-400 text-xs hover:text-white transition-colors duration-300"
+                    className="text-gray-400 text-sm hover:text-white transition-colors duration-300"
                   >
                     {item.name}
                   </Link>
@@ -111,22 +80,23 @@ const Footer = () => {
 
           {/* Contact & Social */}
           <div>
-            <h3 className="text-white text-sm font-semibold mb-3">Connect With Us</h3>
-            <div className="space-y-3">
-              <div className="space-y-1">
-                <p className="text-gray-400 text-xs">Email: contact@hermira.com</p>
-                <p className="text-gray-400 text-xs">Phone: +1 (555) 123-4567</p>
-                <p className="text-gray-400 text-xs">Address: 123 Data Street, Tech City</p>
+            <h3 className="text-white text-lg font-semibold mb-4">Connect</h3>
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <p className="text-gray-400 text-sm">Email: samuel.mati76@gmail.com</p>
+                <p className="text-gray-400 text-sm">Location: Nairobi, Kenya</p>
               </div>
-              <div className="flex space-x-3">
+              <div className="flex space-x-4">
                 {navigation.social.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors duration-300"
                   >
                     <span className="sr-only">{item.name}</span>
-                    <item.icon className="h-5 w-5" aria-hidden="true" />
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
                   </a>
                 ))}
               </div>
@@ -135,9 +105,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-6 border-t border-gray-800">
-          <p className="text-gray-400 text-xs text-center">
-            © {new Date().getFullYear()} Hermira Insights. All rights reserved.
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <p className="text-gray-400 text-sm text-center">
+            © {new Date().getFullYear()} Samuel Mati. All rights reserved.
           </p>
         </div>
       </div>

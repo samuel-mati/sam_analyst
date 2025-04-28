@@ -3,14 +3,14 @@ import { Space_Grotesk } from 'next/font/google';
 import { ThemeProvider } from '@/context/ThemeContext';
 import type { Metadata } from 'next';
 
-const spaceGrotesk = Space_Grotesk({ 
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'Hermira Insights | Data Analytics & Business Intelligence',
-  description: 'Transforming business data into actionable insights with AI-powered analytics.',
+  title: 'Sam_Analyst | Data Analyst & ML Engineer',
+  description: 'Data Analyst and ML Engineer specializing in transforming raw data into actionable insights through advanced analytics, visualization, and machine learning.',
   icons: {
     icon: '/images/favicon.png',
     apple: '/images/apple-touch-icon.png',
@@ -24,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={spaceGrotesk.variable}>
-      <body className={`${spaceGrotesk.variable} font-space antialiased bg-white dark:bg-black text-black dark:text-white`}>
+    <html lang="en" suppressHydrationWarning className={spaceGrotesk.className}>
+      <body className={`${spaceGrotesk.className} font-space antialiased bg-white dark:bg-black text-black dark:text-white`}>
         <ThemeProvider>
           {children}
         </ThemeProvider>
