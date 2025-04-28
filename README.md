@@ -1,31 +1,44 @@
-# Hermira Insights
+# Samuel Mati - Data Science & Analytics Portfolio
 
 **Empowering Smarter Decisions with Data**
 
-Hermira Insights is a modern, AI-powered **Data Analytics as a Service (DaaS)** platform built with **Next.js, TypeScript, and Tailwind CSS**. It helps individuals, SMEs, and enterprises transform raw data into actionable intelligence through automation, predictive modeling, and real-time analytics dashboards.
+Welcome to my personal portfolio! I specialize in Data Analytics, Machine Learning, and Web Scraping. My journey includes working with businesses and organizations to help them make data-driven decisions, optimize processes, and gain valuable insights.
 
-![Website Screenshot](public/images/Hero/page_shot.png)
+![Portfolio Screenshot](public/images/portfolio_screenshot.png)
 
 ---
 
-## 🚀 What We Offer
+## 🚀 What I Offer
 
 - 📊 **AI-Powered Analytics Dashboards**  
+  Design and development of interactive dashboards with real-time data and predictive analytics.
+  
 - 🔍 **Automated Web Scraping & Market Intelligence**  
+  Build custom web scraping solutions and gather data for market research, competitive analysis, and lead generation.
+  
 - 📈 **Business Intelligence & Data Visualization**  
+  Transform data into actionable insights with BI tools and create stunning data visualizations.
+  
 - 🤖 **Process Automation for Operational Efficiency**  
+  Streamline business operations with automation, reducing time and costs.
+  
 - 👥 **Customer Segmentation & Behavior Analysis**  
+  Understand your customers better through segmentation and behavior analytics.
+
 - 📡 **Real-Time KPI Tracking & Alerts**  
-- 🔐 **Secure, Scalable, and Cloud-Ready Architecture**
+  Track key performance indicators (KPIs) in real-time and set up automated alerts for actionable insights.
+
+- 🔐 **Secure, Scalable, and Cloud-Ready Architecture**  
+  Build secure, scalable systems with cloud-based architecture for data storage and processing.
 
 ---
 
 ## 🛠️ Technology Stack
 
-- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS  
-- **Animations:** Framer Motion  
-- **Backend (Planned):** Node.js, Express.js, PostgreSQL  
-- **Dev Tools:** Vercel, GitHub, Canva, Runway ML  
+- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS
+- **Backend (Planned):** Node.js, Express.js, PostgreSQL
+- **Animations:** Framer Motion
+- **Dev Tools:** Vercel, GitHub, Canva, Runway ML
 - **Fonts:** [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
 
 ---
@@ -42,26 +55,43 @@ Hermira Insights is a modern, AI-powered **Data Analytics as a Service (DaaS)** 
 ├── videos/           # Background videos for landing pages
 ├── README.md         # Project overview
 └── ...
+```
 
+⚙️ Getting Started
+To run the project locally, follow these steps:
 
+Clone this repository:
+```bash
+git clone https://github.com/samuel-mati/sam_analyst.git
+```
+
+Navigate into the project directory:
+```bash
+cd sam_analyst
+```
+
+Install dependencies:
 ```bash
 npm install
+```
+
+Run the project:
+```bash
 npm run dev
 ```
 
 
 🙌 Acknowledgments
 Built with ❤️ using Next.js
+
 Deployed via Vercel
+
 Animations with Framer Motion
+
 Fonts from Google Fonts
-👋 Connect with Us
+
+👋 Connect with Me
 Samuel Mati
+📫 LinkedIn – Samuel Mati[https://www.linkedin.com/in/samuel-mati/]
+🌐 GitHub – samuel-mati[https://github.com/samuel-mati]
 
-## 👋 Connect with Me
-
-**Samuel Mati**  
-📫 [LinkedIn – Samuel Mati](https://www.linkedin.com/in/samuel-mati/)  
-🌐 [GitHub – Sam-Analyst-code](https://github.com/Sam-Analyst-code)
-
-“At Hermira Insights, we don’t just show you the data — we help you make sense of it.”
